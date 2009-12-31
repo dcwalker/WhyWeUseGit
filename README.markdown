@@ -12,8 +12,8 @@ It's Fast
 ### branching is fast ###
 Here is the code to create a new branch:
 
-  `
-  git checkout -b <branchname>`
+    git checkout -b <branchname>
+  
 
 You can either keep that branch private on your own repo, or choose to share it with collaborators.
 
@@ -32,16 +32,12 @@ As a git user, merges will become second nature, and will be so easy you won't e
 
 For example, if you want to pull down new code from a remote repository into your local branch you might do the following:
 
-  `
-  git pull
-  `
+    git pull
 
 As a git user you will use this command many times a day without issue.  What you may not realize is that this command is running a merge. Under the hood, git will run something like this (which you can also run maually):
 
-  `
-  git fetch origin
-  git merge origin/master
-  `
+    git fetch origin
+    git merge origin/master
 
 The first command, `fetch` will get all the snapshot from the origin branch, the second merges origin's `master` branch into your `master` branch.
 
