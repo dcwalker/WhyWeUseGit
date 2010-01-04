@@ -41,6 +41,15 @@ As a git user you will use this command many times a day without issue.  What yo
 
 The first command, `fetch` will get all the snapshot from the origin branch, the second merges origin's `master` branch into your `master` branch.
 
+Why is merging easier?
+
+You know where the branch came from!  Ever tried to figure out where a branch cuts off from trunk in subversion?  This information what be very useful when merging or even reviewing a large change set but is aggravatingly difficult to figure out in subversion.
+
+Don't re-merge code that's already merged!  When you merge a branch git knows what has already been merged so it only merges what's new.  Here's an example of why this is so powerful:  Say you have your trunk and a dev branch.  Trunk is the code you have in production and you add a feature that takes 5 commits to complete (not hard to do when you commit early and often).  You merge dev back into trunk after revision 5 then continue work on the next feature.  Meanwhile another developer discovers a bug in the first feature.  It's an easy fix so they implement it in revision 6 by removing the bogus line of code.  Now you've completed feature 2 and it again takes 5 commits.  You want to merge this new feature to the trunk so it can go to production but you don't remember when you last merged.  You have two choices, you can hunt through the logs and sort out where you last merged or you can merge the whole thing.  What if others were committing too?  You have to sort out all their commits as well.  If you just merge the whole branch back you'll re-implement the broken code that your co-worker already fixed (Ah! Regression!).
+
+Git makes the above scenario simple by making the merge simple.  It knows where you last merged and where your branch came from thus keeping you from overwriting other people's work.
+
+
 It's Distributed
 ----------------
 
