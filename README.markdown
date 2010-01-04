@@ -19,6 +19,8 @@ You can either keep that branch private on your own repo, or choose to share it 
 
 Also, you don't change directories when switching branches. When you checkout a different git branch, you are still in the same directory, just with a different snapshot applied.  This works similar to (but _much_ faster than) `svn switch`
 
+Why is it so fast? Because a branch in subversion is complete copy of all the code, in git it's a complete copy of all the differences.  Git manages the differences between the revisions and the branches it doesn't make new copies of the files when you branch like subversion does.  This means switching branches is as fast as applying a patch, not downloading a new file from a remote server.
+
 ### merging is fast and painless ###
 
 When creating git, Linus Torvalds asserted that the creators of Subversion solved the wrong problem by making branching easy.  In his opinion, it was never branching that was the problem, it was _merging_.  So, in git merging has been made simple and manageable.
