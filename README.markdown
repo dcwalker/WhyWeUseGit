@@ -80,7 +80,7 @@ When you're in the middle of feature development and an urgent production suppor
         save all your uncommited work in tmp space for later
       git checkout master
         switch to your clean branch (a mirror of production)
-      git cheackout -b support
+      git checkout -b support
         create and switch to a new branch called "support" which contains a clean copy from master
       Get to work!
       
