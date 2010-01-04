@@ -56,3 +56,12 @@ It's Distributed
 
 It's Secure
 -----------
+
+
+Benefits
+--------
+
+* You pull code to you instead of code being pushed on you.
+* You can check in various save points locally without being required to merge other people's work ("hassle free early and often").
+** If your not ready to merge but want to keep save points for your own sanity, you can.
+* Stashing allows you to switch contexts easily without worrying about committing code that isn't related or ready
