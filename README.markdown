@@ -45,7 +45,7 @@ The first command, `fetch` will get all the snapshot from the origin branch, the
 
 ### Why is merging easier? ###
 
-You know where the branch came from!  Ever tried to figure out where a branch cuts off from trunk in subversion?  This information what be very useful when merging or even reviewing a large change set but is aggravatingly difficult to figure out in subversion.
+You know where the branch came from!  Ever tried to figure out where a branch cuts off from trunk in subversion?  This information would be very useful when merging or even reviewing a large change set but is aggravatingly difficult to figure out in subversion.
 
 Don't merge code that's already merged!  When you merge a branch, git knows what has already been merged so it only merges what's new.  Here's an example of why this is so powerful:
 
