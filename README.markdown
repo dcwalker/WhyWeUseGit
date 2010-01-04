@@ -63,5 +63,21 @@ Benefits
 
 * You pull code to you instead of code being pushed on you.
 * You can check in various save points locally without being required to merge other people's work ("hassle free early and often").
-** If your not ready to merge but want to keep save points for your own sanity, you can.
-* Stashing allows you to switch contexts easily without worrying about committing code that isn't related or ready
+** If you're not ready to merge but want to keep save points for your own sanity, you can.
+
+### Context switching is easy ###
+
+When you're in the middle of feature development and an urgent production support request comes in, you can easily stash your work for later and dive right in to a clean version of the code.
+
+  ex: stash the code on your dev branch and switch to production support mode
+      git stash
+        save all your uncommited work in tmp space for later
+      git checkout master
+        switch to your clean branch (a mirror of production)
+      git cheackout -b support
+        create and switch to a new branch called "support" which contains a clean copy from master
+      Get to work!
+      
+When you're done solving the world's production support issues you're two commands away from being right back where you left off:
+      git checkout dev
+      git stash pop
