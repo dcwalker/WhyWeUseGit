@@ -1,0 +1,4 @@
+As part of using Git we, as a team, should agree on conventions to follow.
+
+=== Commit messages ===
+Commit messages like "doh!" or "fixed a bug" are not allowed.
